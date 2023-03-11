@@ -1,0 +1,48 @@
+[submodule "pack/vendor/start/ale"]
+	path = pack/vendor/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "pack/vendor/start/auto-pairs"]
+	path = pack/vendor/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "pack/vendor/start/coc.nvim"]
+	path = pack/vendor/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+[submodule "pack/vendor/start/Dockerfile.vim"]
+	path = pack/vendor/start/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "pack/vendor/start/editorconfig-vim"]
+	path = pack/vendor/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "pack/vendor/start/gruvbox"]
+	path = pack/vendor/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "pack/vendor/start/indentLine"]
+	path = pack/vendor/start/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "pack/vendor/start/nerdcommenter"]
+	path = pack/vendor/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "pack/vendor/start/nerdtree"]
+	path = pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "pack/vendor/start/tagbar"]
+	path = pack/vendor/start/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "pack/vendor/start/thrift.vim"]
+	path = pack/vendor/start/thrift.vim
+	url = https://github.com/solarnz/thrift.vim.git
+[submodule "pack/vendor/start/vim-airline"]
+	path = pack/vendor/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "pack/vendor/start/vim-easy-align"]
+	path = pack/vendor/start/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "pack/vendor/start/vim-fugitive"]
+	path = pack/vendor/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/vendor/start/vim-markdown"]
+	path = pack/vendor/start/vim-markdown
+	url = https://github.com/preservim/vim-markdown.git
+[submodule "pack/vendor/start/vim-togglecursor"]
+	path = pack/vendor/start/vim-togglecursor
+	url = https://github.com/jszakmeister/vim-togglecursor.git
