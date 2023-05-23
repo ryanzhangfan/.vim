@@ -17,7 +17,7 @@ set smartindent
 set wildmenu                        " auto complete command
 set ignorecase                      " ignore upper/lower case when search
 set smartcase                       " sensitive to uppercase
-set autochdir
+" set autochdir
 set showmatch
 set nobackup
 set noswapfile                      " no swap file .***.swp
@@ -42,11 +42,12 @@ autocmd FileType py setlocal shiftwidth=4 tabstop=4
 filetype on
 filetype plugin on
 filetype plugin indent on
-syntax enable
+" syntax enable
 
 colorscheme gruvbox
 
 " bind switch shortcut
+nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -60,12 +61,12 @@ map <F12> :TagbarToggle<CR>
 " header of different file
 autocmd BufNewFile *.py exec ":call append(0, '')" 
 autocmd BufNewFile *.cc,*.cpp,*.h,*.c exec ":call SetFileHeader('//')"
-autocmd BufNewFile *.py,*.sh exec ":call SetFileHeader('##')" 
+autocmd BufNewFile *.py,*.sh exec ":call SetFileHeader('#')" 
 autocmd BufNewFile *.py exec ":call append(0, ['# -*- coding: utf-8 -*-', ''])" 
 autocmd BufNewFile *.sh exec ":call append(0, '#!/bin/bash')" 
 
 autocmd BufWrite *.cc,*.cpp,*.h,*.c exec ":call UpdateModifyTime('//')"
-autocmd BufWrite *.py,*.sh exec ":call UpdateModifyTime('##')" 
+autocmd BufWrite *.py,*.sh exec ":call UpdateModifyTime('#')" 
 
 " set background transparent
 " hi Normal guibg=NONE ctermbg=NONE
@@ -117,9 +118,9 @@ func CompileRunGcc()
 endfunc
 
 func SetFileHeader(cmt_sym)
-    call append(0, a:cmt_sym . " =================================================== ")
+    call append(0, a:cmt_sym . " ===========================================================================================")
     call append(0, a:cmt_sym)
-    call append(0, a:cmt_sym . "    Description   : ")
+    call append(0, a:cmt_sym . "    Description   :")
     call append(0, a:cmt_sym . "    File Name     : " . expand('%:t'))
     call append(0, a:cmt_sym . "    Last Modified : " . strftime('%Y-%m-%d %H:%M'))
     call append(0, a:cmt_sym . "    Create On     : " . strftime('%Y-%m-%d %H:%M'))
@@ -127,7 +128,9 @@ func SetFileHeader(cmt_sym)
     call append(0, a:cmt_sym . "    Email         : " . GetUserEmail())
     call append(0, a:cmt_sym . "    Author        : " . GetUserName())
     call append(0, a:cmt_sym)
-    call append(0, a:cmt_sym . " =================================================== ")
+    call append(0, a:cmt_sym . "    Copyright (c) " . GetInstitute() . ". All rights reserved.")
+    call append(0, a:cmt_sym)
+    call append(0, a:cmt_sym . " ===========================================================================================")
 endfunc
 
 func UpdateModifyTime(cmt_sym)
